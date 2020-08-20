@@ -9,8 +9,13 @@ function App() {
 
   //Funcion que tome las citas actuales y agregue la nueva.
   const crearCita = cita => {
-    //console.log(cita);
     setCitas([...citas, cita])
+  }
+
+  //Funcion que elimina una cita por su id
+  const eliminarCita = id => {
+    const nuevasCitas = citas.filter(cita => cita.id !== id);
+    setCitas(nuevasCitas);
   }
 
   return (
