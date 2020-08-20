@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 const Cita = ({ cita, eliminarCita }) => {
 
@@ -18,6 +19,11 @@ const Cita = ({ cita, eliminarCita }) => {
             </div>
         </Fragment>
     );
+}
+
+Cita.propTypes = {
+    cita: PropTypes.object.isRequired,
+    eliminarCita: PropTypes.func.isRequired
 }
 
 export default Cita;
